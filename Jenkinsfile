@@ -8,10 +8,8 @@ node {
     }
     
     stage('Build app') {
-+        steps {
                 sh 'npm install' 
-            }
-+   }
+    }
     
     stage('Build image') {
         /* This builds the actual image; synonymous to
