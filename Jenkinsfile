@@ -7,7 +7,9 @@ node {
         checkout scm
     }
     stage('Build app') {
-+        sh 'npm install'
++        steps {
+                sh 'npm install' 
+            }
 +    }
     stage('Build image') {
         /* This builds the actual image; synonymous to
