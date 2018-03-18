@@ -38,7 +38,7 @@ node {
         }
     }
     stage ('changefile') {
-                bash './buildjson.sh 32'    
+                sh './buildjson.sh 32'    
     }
     
     withAWS(region:'ap-south-1',credentials:'nameOfSystemCredentials') {
