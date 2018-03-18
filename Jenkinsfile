@@ -38,4 +38,8 @@ node {
            // app.push()
         }
     }
+    stage ('Buid template'){
+        sh './buildjson.sh testnode'
+    
+    }
 }
