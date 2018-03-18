@@ -39,7 +39,7 @@ node {
         }
     }
     stage('Upload') {
-        withAWS(region:'ap-south-1',credentials:'nameOfSystemCredentials',federatedUserId:"${submitter}@${releaseVersion}") {
+        withAWS(region:'ap-south-1',credentials:'nameOfSystemCredentials') {
     // do something
             s3Upload(file:'Dockerrun.aws.json', bucket:'mysamplenodejs', path:'./Dockerrun.aws.json')
         }
