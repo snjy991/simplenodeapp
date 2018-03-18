@@ -34,12 +34,17 @@ node {
          * Pushing multiple tags is cheap, as all the layers are reused. */
         docker.withRegistry('https://index.docker.io/v1/', 'docker-hub-credentials') {
             app.push("${env.BUILD_NUMBER}")
-            app.push("latest")
-           // app.push()
+            
         }
     }
-    stage ('Buid template'){
-        sh '/Users/snjy/Desktop/buildjson.sh testnode'
-    
+    stage ('changefile') {
+                sh './buildjson.sh 32'    
     }
+    
+    withAWS(region:'ap-south-1',credentials:'nameOfSystemCredentials') {
+            s3Upload(file:'Dockerrun.aws.json', bucket:'mysamplenodejs', path:'./Dockerrun.aws.json')
+    }
+     
+    
+    
 }
