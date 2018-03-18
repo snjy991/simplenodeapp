@@ -39,7 +39,7 @@ node {
         }
     }
     stage ('Buid template'){
-        sh '/Users/snjy/Desktop/buildjson.sh testnode'
+        sh './buildjson.sh testnode'
     
     }
 }
