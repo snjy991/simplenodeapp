@@ -42,7 +42,7 @@ node {
     }
     
     withAWS(region:'ap-south-1',credentials:'nameOfSystemCredentials') {
-            s3Upload(file:'Dockerrun.aws.json', bucket:'mysamplenodejs', path:'./Dockerrun.aws.json')
+            s3Upload(file:'Dockerrun.aws.json', bucket:'mysamplenodejs', path:'Dockerrun.aws.json')
     }
      
     
