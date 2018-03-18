@@ -1,0 +1,17 @@
+{
+ "AWSEBDockerrunVersion": 2,
+ "Authentication": {
+   "Bucket": "mysamplenodejs",
+   "Key": ".dockercfg.json"
+ },
+ "Image": {
+    "Name": "test",
+    "Update": "true"
+  },
+ "Ports": [
+   {
+     "ContainerPort": 8081
+   }
+ ],
+ "Logging": "/var/log"
+}
