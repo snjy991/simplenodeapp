@@ -38,6 +38,12 @@ node {
            app.push()
         }
     }
+    stage('Upload') {
+        withAWS(region:'ap-south-1',credentials:'nameOfSystemCredentials',federatedUserId:"${submitter}@${releaseVersion}") {
+    // do something
+            s3Upload(file:'Dockerrun.aws.json', bucket:'mysamplenodejs', path:'./Dockerrun.aws.json')
+        }
+    }
     
     
 }
