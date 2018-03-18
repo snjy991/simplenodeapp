@@ -38,7 +38,7 @@ node {
         }
     }
     stage ('changefile') {
-        sh './buildjson.sh snjy991/testnode:${env.BUILD_NUMBER}'
+        sh './buildjson.sh ${env.BUILD_NUMBER}'
     }
     
     withAWS(region:'ap-south-1',credentials:'nameOfSystemCredentials') {
