@@ -32,16 +32,16 @@ node {
             app1 = docker.build("snjy991/nodeservice1")
         }
         dir ('nodeservice2') {
-            app1 = docker.build("snjy991/nodeservice2")
+            app2 = docker.build("snjy991/nodeservice2")
         } 
         dir ('nodeservice3') {
-            app1 = docker.build("snjy991/nodeservice3")
+            app3 = docker.build("snjy991/nodeservice3")
         } 
         dir ('nodeservice4') {
-            app1 = docker.build("snjy991/nodeservice4")
+            app4 = docker.build("snjy991/nodeservice4")
         } 
         dir ('nodeservice5') {
-            app1 = docker.build("snjy991/nodeservice5")
+            app5 = docker.build("snjy991/nodeservice5")
         } 
     }
 
