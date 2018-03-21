@@ -8,7 +8,21 @@ node {
     }
     
     stage('Build app') {
+            dir ('nodeservice1') {
                 sh 'npm install' 
+            }
+            dir ('nodeservice2') {
+                sh 'npm install' 
+            }
+            dir ('nodeservice3') {
+                sh 'npm install' 
+            }
+            dir ('nodeservice4') {
+                sh 'npm install' 
+            }
+            dir ('nodeservice5') {
+                sh 'npm install' 
+            }
     }
     
     stage('Build image') {
