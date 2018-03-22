@@ -84,7 +84,7 @@ node {
     stage ('changefile') {
         sh './buildjson.sh snjy991/testnode:${BUILD_NUMBER}'    
      }
-    withAWS(region:'ap-south-1',credentials:'nameOfSystemCredentials') {
+    withAWS(region:'us-east-1',credentials:'nameOfSystemCredentials') {
             s3Upload(file:'Dockerrun.aws.json', bucket:'mysamplenodejs', path:'Dockerrun.aws.json')
     }
      
